@@ -1,0 +1,23 @@
+{
+  "name": "cordova-electron-v3-demo-plugin",
+  "version": "1.0.0",
+  "description": "Demo plugin for cordova-electron",
+  "cordova": {
+    "id": "cordova-electron-v3-demo-plugin",
+    "platforms": [
+      "android",
+      "ios",
+      "browser",
+      "electron"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-browser",
+    "cordova-electron"
+  ],
+  "author": "Cimatti Consulting",
+  "license": "Apache-2.0"
+}

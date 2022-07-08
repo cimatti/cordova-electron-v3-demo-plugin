@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin
+    id="cordova-electron-v3-demo-plugin"
+    version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CordovaElectronV3DemoPlugin</name>
+    <js-module name="CordovaElectronV3DemoPlugin" src="www/CordovaElectronV3DemoPlugin.js">
+        <clobbers target="cordova.plugins.CordovaElectronV3DemoPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CordovaElectronV3DemoPlugin">
+                <param name="android-package"
+                    value="cordova_electron_v3_demo_plugin.CordovaElectronV3DemoPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/CordovaElectronV3DemoPlugin.java"
+            target-dir="src/cordova_electron_v3_demo_plugin/CordovaElectronV3DemoPlugin" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="CordovaElectronV3DemoPlugin">
+                <param name="ios-package" value="CordovaElectronV3DemoPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/CordovaElectronV3DemoPlugin.m" />
+    </platform>
+    <platform name="browser">
+        <js-module name="CordovaElectronV3DemoPluginProxy"
+            src="src/browser/CordovaElectronV3DemoPluginProxy.js">
+            <runs />
+        </js-module>
+    </platform>
+    <platform name="electron">
+        <framework src="src/electron" />
+    </platform>
+</plugin>
